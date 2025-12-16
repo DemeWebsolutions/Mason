@@ -1,0 +1,63 @@
+Stone Mason WordPress Theme - Proprietary License
+
+Copyright (c) 2025 DemeWebsolutions.com
+All Rights Reserved
+
+This theme and its associated files (the "Software") are proprietary and 
+confidential. Unauthorized copying, distribution, modification, or use of 
+this Software, via any medium, is strictly prohibited.
+
+TERMS AND CONDITIONS
+
+1. LICENSE GRANT
+   Subject to the terms of this agreement, DemeWebsolutions.com grants you a 
+   limited, non-exclusive, non-transferable license to use this Software on 
+   websites that you own or operate.
+
+2. RESTRICTIONS
+   You may NOT:
+   - Redistribute, sell, lease, rent, or sublicense the Software
+   - Modify, adapt, or create derivative works
+   - Remove or alter any proprietary notices
+   - Use the Software on websites you do not own or operate
+   - Share access credentials or download links
+
+3. OWNERSHIP
+   DemeWebsolutions.com retains all rights, title, and interest in and to 
+   the Software, including all intellectual property rights.
+
+4. SUPPORT AND UPDATES
+   Support and updates are provided at the discretion of DemeWebsolutions.com.
+
+5. WARRANTY DISCLAIMER
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, 
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+
+6. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL DEMEWEBSOLUTIONS.COM BE LIABLE FOR ANY CLAIM, DAMAGES, 
+   OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+7. TERMINATION
+   This license is effective until terminated. Your rights under this license 
+   will terminate automatically without notice if you fail to comply with any 
+   of its terms.
+
+8. GOVERNING LAW
+   This agreement shall be governed by and construed in accordance with the 
+   laws of the jurisdiction in which DemeWebsolutions.com operates.
+
+For licensing inquiries, please contact:
+https://demewebsolutions.com/contact
+
+THIRD-PARTY COMPONENTS
+
+This theme uses the following open-source components:
+
+- WordPress (GPL v2 or later)
+- Twenty Twenty-Five Theme (GPL v2 or later)
+- @wordpress/scripts (GPL v2 or later)
+- WooCommerce (GPL v3 or later)
+- GSAP (Commercial license required separately)
+
+Each component is subject to its own license terms.

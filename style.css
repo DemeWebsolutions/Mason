@@ -1,0 +1,83 @@
+/*
+Theme Name: Stone Mason
+Theme URI: https://demewebsolutions.com/mason
+Description: Stone Mason is a proprietary, block-first hybrid WordPress system for Apple-style WooCommerce sites. Features TT5-compatible child theme, centralized theme.json, native Gutenberg blocks, custom PHP/React blocks, and WooCommerce Blocks integration. Clean semantic HTML, minimal scripts, optional GSAP, and strict performance rules targeting 95+ Lighthouse scores with zero vendor lock-in.
+Author: DemeWebsolutions.com
+Author URI: https://demewebsolutions.com
+Template: twentytwentyfive
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 8.0
+License: Proprietary
+License URI: https://demewebsolutions.com/license
+Text Domain: stone-mason
+Tags: block-patterns, block-styles, custom-colors, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, one-column, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
+*/
+
+/*
+ * Stone Mason Child Theme
+ * Extends Twenty Twenty-Five with block-first architecture
+ * for high-performance WooCommerce sites
+ */
+
+/* Minimal base styles - most styling handled via theme.json and blocks */
+:root {
+  --mason-spacing-unit: 1rem;
+  --mason-max-width: 1280px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* Ensure blocks use semantic HTML */
+.wp-block-group,
+.wp-block-columns,
+.wp-block-column {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Performance: Reduce layout shift */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* WooCommerce accessibility improvements */
+.woocommerce-breadcrumb {
+  font-size: 0.875rem;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}

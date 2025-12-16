@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "stone-mason/product-card",
+	"version": "1.0.0",
+	"title": "Product Card",
+	"category": "stone-mason",
+	"icon": "cart",
+	"description": "A custom product card block for WooCommerce products with Apple-inspired design",
+	"keywords": ["product", "woocommerce", "card", "shop"],
+	"textdomain": "stone-mason",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": {
+			"padding": true,
+			"margin": true
+		},
+		"color": {
+			"background": true,
+			"text": true
+		}
+	},
+	"attributes": {
+		"productId": {
+			"type": "number",
+			"default": 0
+		},
+		"showPrice": {
+			"type": "boolean",
+			"default": true
+		},
+		"showButton": {
+			"type": "boolean",
+			"default": true
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Add to Cart"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}
