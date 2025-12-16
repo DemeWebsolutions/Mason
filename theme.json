@@ -223,15 +223,15 @@
 		"custom": {
 			"spacing": {
 				"unit": "1rem",
-				"containerPadding": "1.5rem"
+				"container-padding": "1.5rem"
 			},
 			"woocommerce": {
-				"productGap": "2rem",
-				"buttonRadius": "0.375rem"
+				"product-gap": "2rem",
+				"button-radius": "0.375rem"
 			},
 			"performance": {
-				"lazyLoad": true,
-				"deferScripts": true
+				"lazy-load": true,
+				"defer-scripts": true
 			}
 		},
 		"blocks": {

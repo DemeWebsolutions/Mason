@@ -121,15 +121,27 @@ function stone_mason_render_product_card( $attributes, $content ) {
 	return ob_get_clean();
 }
 
-// Register the render callback after blocks are registered.
-add_action( 'init', function() {
+/**
+ * Filter callback for rendering product card block
+ *
+ * @param string $block_content Block content.
+ * @param array  $block         Block data.
+ * @return string Modified block content.
+ */
+function stone_mason_product_card_render_filter( $block_content, $block ) {
+	if ( 'stone-mason/product-card' === $block['blockName'] ) {
+		return stone_mason_render_product_card( $block['attrs'], $block_content );
+	}
+	return $block_content;
+}
+
+/**
+ * Register product card render callback
+ */
+function stone_mason_register_product_card_callback() {
 	if ( function_exists( 'register_block_type' ) ) {
 		// Hook into block rendering.
-		add_filter( 'render_block', function( $block_content, $block ) {
-			if ( 'stone-mason/product-card' === $block['blockName'] ) {
-				return stone_mason_render_product_card( $block['attrs'], $block_content );
-			}
-			return $block_content;
-		}, 10, 2 );
+		add_filter( 'render_block', 'stone_mason_product_card_render_filter', 10, 2 );
 	}
-}, 100 );
+}
+add_action( 'init', 'stone_mason_register_product_card_callback', 100 );

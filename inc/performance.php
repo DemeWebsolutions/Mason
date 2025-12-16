@@ -116,8 +116,8 @@ function stone_mason_lazy_load_iframes( $content ) {
 		return $content;
 	}
 
-	// Add loading="lazy" to iframes
-	$content = preg_replace( '/<iframe(.*?)>/', '<iframe loading="lazy"$1>', $content );
+	// Add loading="lazy" to iframes that don't already have it.
+	$content = preg_replace( '/<iframe(?![^>]*loading=)(.*?)>/', '<iframe loading="lazy"$1>', $content );
 	
 	return $content;
 }

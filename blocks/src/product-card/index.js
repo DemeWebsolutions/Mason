@@ -29,7 +29,7 @@ const Edit = ({ attributes, setAttributes }) => {
 					<TextControl
 						label={__('Product ID', 'stone-mason')}
 						value={productId}
-						onChange={(value) => setAttributes({ productId: parseInt(value) || 0 })}
+						onChange={(value) => setAttributes({ productId: parseInt(value, 10) || 0 })}
 						type="number"
 						help={__('Enter the WooCommerce product ID', 'stone-mason')}
 					/>
