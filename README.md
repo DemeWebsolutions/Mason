@@ -106,6 +106,31 @@ stone-mason/
 - Customizable heading, subheading, and CTA
 - Full alignment support
 
+**Feature Grid** (`stone-mason/feature-grid`)
+- 2-3 column feature highlights
+- Icon/emoji support
+- Responsive grid layout
+
+**Product Spotlight** (`stone-mason/product-spotlight`)
+- WooCommerce product focus block
+- Image-left or image-right layouts
+- Price, description, and CTA options
+
+**Sticky Buy Bar** (`stone-mason/sticky-buy-bar`)
+- Floating add-to-cart bar
+- Appears on scroll (configurable threshold)
+- Product image, title, price, and button
+
+**Specs Table** (`stone-mason/specs-table`)
+- Technical specifications display
+- Striped row option
+- Semantic table markup
+
+**Section Divider** (`stone-mason/section-divider`)
+- Visual section separation
+- Multiple styles: line, space, dots
+- Configurable width and alignment
+
 ### React Blocks
 
 **Product Card** (`stone-mason/product-card`)

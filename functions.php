@@ -63,6 +63,16 @@ function stone_mason_enqueue_assets() {
 		STONE_MASON_VERSION
 	);
 
+	// Custom blocks styles.
+	if ( file_exists( STONE_MASON_PATH . '/assets/css/blocks.css' ) ) {
+		wp_enqueue_style(
+			'stone-mason-blocks',
+			STONE_MASON_URL . '/assets/css/blocks.css',
+			array( 'stone-mason-style' ),
+			STONE_MASON_VERSION
+		);
+	}
+
 	// WooCommerce styles (only if WooCommerce is active).
 	if ( class_exists( 'WooCommerce' ) && file_exists( STONE_MASON_PATH . '/assets/css/woocommerce.css' ) ) {
 		wp_enqueue_style(
@@ -121,8 +131,20 @@ add_action( 'init', 'stone_mason_register_block_patterns_category' );
  */
 function stone_mason_register_blocks() {
 	// Register custom PHP blocks.
-	if ( file_exists( STONE_MASON_PATH . '/blocks/php/hero-section/block.php' ) ) {
-		require_once STONE_MASON_PATH . '/blocks/php/hero-section/block.php';
+	$php_blocks = array(
+		'hero-section',
+		'feature-grid',
+		'product-spotlight',
+		'sticky-buy-bar',
+		'specs-table',
+		'section-divider',
+	);
+
+	foreach ( $php_blocks as $block ) {
+		$block_file = STONE_MASON_PATH . '/blocks/php/' . $block . '/block.php';
+		if ( file_exists( $block_file ) ) {
+			require_once $block_file;
+		}
 	}
 
 	// Register product card render callback.

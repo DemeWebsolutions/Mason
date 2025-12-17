@@ -1,0 +1,376 @@
+/**
+ * Stone Mason Custom Blocks Styles
+ * Styles for all custom blocks
+ * 
+ * @package StoneMason
+ */
+
+/* ========================================
+   Feature Grid Block
+   ======================================== */
+
+.mason-feature-grid {
+	padding: var(--wp--preset--spacing--50) 0;
+}
+
+.mason-feature-grid__container {
+	display: grid;
+	gap: var(--wp--preset--spacing--50);
+	max-width: var(--wp--style--global--wide-size, 1280px);
+	margin: 0 auto;
+}
+
+.mason-feature-grid--columns-2 .mason-feature-grid__container {
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.mason-feature-grid--columns-3 .mason-feature-grid__container {
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.mason-feature-grid__item {
+	text-align: center;
+	padding: var(--wp--preset--spacing--40);
+}
+
+.mason-feature-grid__icon {
+	font-size: 3rem;
+	margin-bottom: var(--wp--preset--spacing--30);
+	line-height: 1;
+}
+
+.mason-feature-grid__title {
+	margin: 0 0 var(--wp--preset--spacing--20);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 600;
+	color: var(--wp--preset--color--contrast);
+}
+
+.mason-feature-grid__description {
+	margin: 0;
+	color: var(--wp--preset--color--secondary);
+	line-height: 1.6;
+}
+
+/* ========================================
+   Product Spotlight Block
+   ======================================== */
+
+.mason-product-spotlight {
+	display: grid;
+	gap: var(--wp--preset--spacing--50);
+	align-items: center;
+	padding: var(--wp--preset--spacing--60) 0;
+}
+
+.mason-product-spotlight--image-left {
+	grid-template-columns: 1fr 1fr;
+}
+
+.mason-product-spotlight--image-right {
+	grid-template-columns: 1fr 1fr;
+}
+
+.mason-product-spotlight--image-right .mason-product-spotlight__image {
+	order: 2;
+}
+
+.mason-product-spotlight__image {
+	border-radius: 12px;
+	overflow: hidden;
+	background-color: var(--wp--preset--color--accent);
+}
+
+.mason-product-spotlight__image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.mason-product-spotlight__content {
+	padding: var(--wp--preset--spacing--40);
+}
+
+.mason-product-spotlight__title {
+	margin: 0 0 var(--wp--preset--spacing--30);
+	font-size: var(--wp--preset--font-size--xx-large);
+	font-weight: 700;
+	line-height: 1.2;
+	color: var(--wp--preset--color--contrast);
+}
+
+.mason-product-spotlight__price {
+	margin: 0 0 var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--x-large);
+	font-weight: 600;
+	color: var(--wp--preset--color--primary);
+}
+
+.mason-product-spotlight__description {
+	margin: 0 0 var(--wp--preset--spacing--50);
+	font-size: var(--wp--preset--font-size--medium);
+	line-height: 1.6;
+	color: var(--wp--preset--color--contrast);
+}
+
+.mason-product-spotlight__button {
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	text-decoration: none;
+	border-radius: 0.5rem;
+	font-weight: 600;
+	transition: background-color 0.3s ease;
+}
+
+.mason-product-spotlight__button:hover {
+	background-color: var(--wp--preset--color--contrast);
+}
+
+.mason-product-spotlight-placeholder {
+	padding: var(--wp--preset--spacing--50);
+	text-align: center;
+	background-color: var(--wp--preset--color--accent);
+	border-radius: 8px;
+	color: var(--wp--preset--color--secondary);
+}
+
+/* ========================================
+   Sticky Buy Bar Block
+   ======================================== */
+
+.mason-sticky-buy-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: var(--wp--preset--color--base);
+	box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+	transform: translateY(100%);
+	transition: transform 0.3s ease;
+}
+
+.mason-sticky-buy-bar.is-visible {
+	transform: translateY(0);
+}
+
+.mason-sticky-buy-bar__container {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--30);
+	max-width: var(--wp--style--global--wide-size, 1280px);
+	margin: 0 auto;
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+}
+
+.mason-sticky-buy-bar__image {
+	flex-shrink: 0;
+	width: 60px;
+	height: 60px;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: var(--wp--preset--color--accent);
+}
+
+.mason-sticky-buy-bar__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.mason-sticky-buy-bar__info {
+	flex: 1;
+	min-width: 0;
+}
+
+.mason-sticky-buy-bar__title {
+	margin: 0 0 0.25rem;
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 600;
+	color: var(--wp--preset--color--contrast);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.mason-sticky-buy-bar__price {
+	margin: 0;
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 500;
+	color: var(--wp--preset--color--primary);
+}
+
+.mason-sticky-buy-bar__button {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+	text-decoration: none;
+	border-radius: 0.5rem;
+	font-weight: 600;
+	white-space: nowrap;
+	transition: background-color 0.3s ease;
+}
+
+.mason-sticky-buy-bar__button:hover {
+	background-color: var(--wp--preset--color--contrast);
+}
+
+/* ========================================
+   Specs Table Block
+   ======================================== */
+
+.mason-specs-table {
+	padding: var(--wp--preset--spacing--40) 0;
+}
+
+.mason-specs-table__title {
+	margin: 0 0 var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 700;
+	color: var(--wp--preset--color--contrast);
+}
+
+.mason-specs-table__table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.mason-specs-table__row {
+	border-bottom: 1px solid var(--wp--preset--color--accent);
+}
+
+.mason-specs-table--striped .mason-specs-table__row:nth-child(even) {
+	background-color: var(--wp--preset--color--accent);
+}
+
+.mason-specs-table__label,
+.mason-specs-table__value {
+	padding: var(--wp--preset--spacing--30);
+	text-align: left;
+}
+
+.mason-specs-table__label {
+	font-weight: 600;
+	color: var(--wp--preset--color--contrast);
+	width: 40%;
+}
+
+.mason-specs-table__value {
+	color: var(--wp--preset--color--secondary);
+}
+
+/* ========================================
+   Section Divider Block
+   ======================================== */
+
+.mason-section-divider {
+	padding: var(--wp--preset--spacing--40) 0;
+}
+
+.mason-section-divider--line {
+	display: flex;
+	justify-content: var(--divider-alignment, center);
+}
+
+.mason-section-divider--center {
+	--divider-alignment: center;
+}
+
+.mason-section-divider--left {
+	--divider-alignment: flex-start;
+}
+
+.mason-section-divider--right {
+	--divider-alignment: flex-end;
+}
+
+.mason-section-divider__line {
+	border: none;
+	border-top: var(--divider-height, 1px) solid var(--wp--preset--color--secondary);
+	width: var(--divider-width, 100%);
+	max-width: var(--divider-max-width, none);
+	margin: 0;
+}
+
+.mason-section-divider--dashed .mason-section-divider__line {
+	border-top-style: dashed;
+}
+
+.mason-section-divider--dotted .mason-section-divider__line {
+	border-top-style: dotted;
+}
+
+.mason-section-divider--space {
+	height: var(--divider-space, 3rem);
+}
+
+.mason-section-divider--dots {
+	display: flex;
+	justify-content: center;
+}
+
+.mason-section-divider__dots {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.mason-section-divider__dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--secondary);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+	.mason-feature-grid__container {
+		grid-template-columns: 1fr;
+		gap: var(--wp--preset--spacing--40);
+	}
+
+	.mason-product-spotlight--image-left,
+	.mason-product-spotlight--image-right {
+		grid-template-columns: 1fr;
+	}
+
+	.mason-product-spotlight--image-right .mason-product-spotlight__image {
+		order: 0;
+	}
+
+	.mason-sticky-buy-bar__container {
+		gap: var(--wp--preset--spacing--20);
+		padding: var(--wp--preset--spacing--20);
+	}
+
+	.mason-sticky-buy-bar__image {
+		width: 50px;
+		height: 50px;
+	}
+
+	.mason-sticky-buy-bar__title {
+		font-size: var(--wp--preset--font-size--small);
+	}
+
+	.mason-specs-table__label,
+	.mason-specs-table__value {
+		padding: var(--wp--preset--spacing--20);
+		display: block;
+		width: 100%;
+	}
+
+	.mason-specs-table__label {
+		padding-bottom: var(--wp--preset--spacing--10);
+		border-bottom: none;
+	}
+
+	.mason-specs-table__value {
+		padding-top: 0;
+	}
+}

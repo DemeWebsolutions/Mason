@@ -128,5 +128,28 @@ function stone_mason_register_patterns() {
 <!-- /wp:group -->',
 		)
 	);
+
+	/**
+	 * Product Page Layout Pattern
+	 */
+	register_block_pattern(
+		'stone-mason/product-page-layout',
+		array(
+			'title'       => __( 'Product Page Layout', 'stone-mason' ),
+			'description' => __( 'Complete product page with spotlight, specs table, and sticky buy bar', 'stone-mason' ),
+			'categories'  => array( 'stone-mason', 'woocommerce' ),
+			'content'     => '<!-- wp:stone-mason/product-spotlight /-->
+
+<!-- wp:stone-mason/section-divider /-->
+
+<!-- wp:stone-mason/specs-table /-->
+
+<!-- wp:stone-mason/section-divider /-->
+
+<!-- wp:stone-mason/feature-grid /-->
+
+<!-- wp:stone-mason/sticky-buy-bar /-->',
+		)
+	);
 }
 add_action( 'init', 'stone_mason_register_patterns' );
