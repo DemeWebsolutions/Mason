@@ -1,12 +1,16 @@
-# Stone Mason - Block-First WordPress System
+# Mason Theme - Block-First WordPress System
 
-**Stone Mason (Mason Core Builder)** is a proprietary, block-first hybrid WordPress system by [DemeWebsolutions.com](https://demewebsolutions.com) for Apple-style WooCommerce sites.
+**Mason Theme** powered by **Stone Mason Core** - A Blocksy-like enhancement system for WordPress.
+
+A proprietary, block-first hybrid WordPress theme by [DemeWebsolutions.com](https://demewebsolutions.com) for Apple-style WooCommerce sites.
 
 ## 🎯 Overview
 
-Stone Mason is built for high-performance e-commerce experiences with:
+Mason is built for high-performance e-commerce experiences with:
 
 - ✅ **TT5-compatible child theme** - Extends Twenty Twenty-Five
+- ✅ **Stone Mason Core** - Blocksy-like enhancements and utilities
+- ✅ **Mason Blocks Plugin** - Custom blocks in a separate plugin
 - ✅ **Centralized theme.json** - Full-site editing configuration
 - ✅ **Native Gutenberg only** - No page builders or shortcodes
 - ✅ **Custom PHP/React blocks** - Modular, reusable components
@@ -17,6 +21,32 @@ Stone Mason is built for high-performance e-commerce experiences with:
 - ✅ **95+ Lighthouse scores** - Strict performance rules
 - ✅ **Zero vendor lock-in** - Standards-based, portable code
 
+## 📦 Components
+
+### Mason Theme
+Main WordPress theme extending Twenty Twenty-Five with:
+- Custom theme.json configuration
+- Performance optimizations
+- WooCommerce integration
+- FSE templates and parts
+
+### Mason Blocks Plugin
+Companion plugin providing 8 custom blocks:
+- Hero Section
+- Feature Grid
+- Product Spotlight
+- Sticky Buy Bar
+- Specs Table
+- Section Divider
+- Product Cards (PHP & React)
+
+### Stone Mason Core
+Blocksy-like enhancement layer providing:
+- Advanced customization hooks
+- Performance utilities
+- Block registration system
+- Asset management
+
 ## 📋 Requirements
 
 - **WordPress**: 6.4 or higher
@@ -24,6 +54,7 @@ Stone Mason is built for high-performance e-commerce experiences with:
 - **Node.js**: 18.0 or higher (for block development)
 - **npm**: 9.0 or higher
 - **Parent Theme**: Twenty Twenty-Five (twentytwentyfive)
+- **Companion Plugin**: Mason Blocks (included)
 - **WooCommerce**: 8.0+ (optional, but recommended)
 
 ## 🚀 Quick Start
@@ -36,26 +67,38 @@ Stone Mason is built for high-performance e-commerce experiences with:
    # Or download from wordpress.org/themes/twentytwentyfive
    ```
 
-2. **Install Stone Mason**
+2. **Install Mason Theme**
    ```bash
    cd wp-content/themes
-   git clone https://github.com/DemeWebsolutions/Mason.git stone-mason
-   cd stone-mason
+   git clone https://github.com/DemeWebsolutions/Mason.git mason
+   cd mason
    ```
 
-3. **Install Dependencies**
+3. **Install Mason Blocks Plugin**
    ```bash
+   cd wp-content/plugins
+   cp -r ../themes/mason/mason-blocks ./
+   ```
+   Or activate through WordPress Admin → Plugins → Mason Blocks
+
+4. **Install Dependencies** (Optional - for development)
+   ```bash
+   cd wp-content/themes/mason
    npm install
    ```
 
-4. **Build Blocks**
+5. **Build Blocks** (Optional - for development)
    ```bash
    npm run build
    ```
 
-5. **Activate Theme**
+6. **Activate Theme**
    - Go to WordPress Admin → Appearance → Themes
-   - Activate "Stone Mason"
+   - Activate "Mason"
+
+7. **Activate Mason Blocks Plugin**
+   - Go to WordPress Admin → Plugins
+   - Activate "Mason Blocks"
 
 ### Development Mode
 

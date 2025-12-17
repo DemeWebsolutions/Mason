@@ -1,8 +1,9 @@
 <?php
 /**
- * Stone Mason Theme Functions
+ * Mason Theme Functions
+ * Powered by Stone Mason Core
  *
- * @package StoneMason
+ * @package Mason
  * @since 1.0.0
  */
 
@@ -14,16 +15,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define constants
  */
-define( 'STONE_MASON_VERSION', '1.0.0' );
-define( 'STONE_MASON_PATH', get_stylesheet_directory() );
-define( 'STONE_MASON_URL', get_stylesheet_directory_uri() );
+define( 'MASON_VERSION', '1.0.0' );
+define( 'MASON_PATH', get_stylesheet_directory() );
+define( 'MASON_URL', get_stylesheet_directory_uri() );
+
+// Backward compatibility constants
+define( 'STONE_MASON_VERSION', MASON_VERSION );
+define( 'STONE_MASON_PATH', MASON_PATH );
+define( 'STONE_MASON_URL', MASON_URL );
 
 /**
  * Theme setup
  */
-function stone_mason_setup() {
+function mason_theme_setup() {
 	// Load child theme text domain.
-	load_child_theme_textdomain( 'stone-mason', STONE_MASON_PATH . '/languages' );
+	load_child_theme_textdomain( 'mason', MASON_PATH . '/languages' );
 
 	// Add support for block styles.
 	add_theme_support( 'wp-block-styles' );
@@ -48,7 +54,12 @@ function stone_mason_setup() {
 	// Declare WooCommerce Blocks compatibility.
 	add_theme_support( 'woocommerce-blocks' );
 }
-add_action( 'after_setup_theme', 'stone_mason_setup' );
+add_action( 'after_setup_theme', 'mason_theme_setup' );
+
+// Backward compatibility alias
+function stone_mason_setup() {
+	mason_theme_setup();
+}
 
 /**
  * Enqueue scripts and styles
@@ -116,21 +127,69 @@ add_action( 'wp_enqueue_scripts', 'stone_mason_enqueue_assets' );
 /**
  * Register custom block patterns category
  */
-function stone_mason_register_block_patterns_category() {
+function mason_register_block_patterns_category() {
+	register_block_pattern_category(
+		'mason',
+		array(
+			'label' => __( 'Mason', 'mason' ),
+		)
+	);
+	
+	// Legacy category for backward compatibility
 	register_block_pattern_category(
 		'stone-mason',
 		array(
-			'label' => __( 'Stone Mason', 'stone-mason' ),
+			'label' => __( 'Stone Mason', 'mason' ),
 		)
 	);
 }
-add_action( 'init', 'stone_mason_register_block_patterns_category' );
+add_action( 'init', 'mason_register_block_patterns_category' );
+
+// Backward compatibility alias
+function stone_mason_register_block_patterns_category() {
+	mason_register_block_patterns_category();
+}
 
 /**
- * Register custom blocks
+ * Check for Mason Blocks plugin
+ */
+function mason_check_blocks_plugin() {
+	if ( ! function_exists( 'Mason_Blocks' ) && ! class_exists( 'Mason_Blocks' ) ) {
+		add_action( 'admin_notices', 'mason_blocks_plugin_notice' );
+	}
+}
+add_action( 'after_setup_theme', 'mason_check_blocks_plugin' );
+
+/**
+ * Display admin notice if Mason Blocks plugin is not active
+ */
+function mason_blocks_plugin_notice() {
+	?>
+	<div class="notice notice-warning">
+		<p>
+			<?php
+			printf(
+				/* translators: %s: plugin name */
+				__( '<strong>Mason Theme:</strong> The %s plugin is recommended for full functionality. Install and activate it to use custom blocks.', 'mason' ),
+				'<strong>Mason Blocks</strong>'
+			);
+			?>
+		</p>
+	</div>
+	<?php
+}
+
+/**
+ * Legacy block registration (for backward compatibility)
+ * Blocks are now registered via Mason Blocks plugin
  */
 function stone_mason_register_blocks() {
-	// Register custom PHP blocks.
+	// Check if blocks are registered by plugin
+	if ( class_exists( 'Mason_Blocks' ) ) {
+		return; // Plugin handles block registration
+	}
+
+	// Fallback: Register blocks from theme if plugin is not active
 	$php_blocks = array(
 		'hero-section',
 		'feature-grid',

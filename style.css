@@ -1,7 +1,7 @@
 /*
-Theme Name: Stone Mason
+Theme Name: Mason
 Theme URI: https://demewebsolutions.com/mason
-Description: Stone Mason is a proprietary, block-first hybrid WordPress system for Apple-style WooCommerce sites. Features TT5-compatible child theme, centralized theme.json, native Gutenberg blocks, custom PHP/React blocks, and WooCommerce Blocks integration. Clean semantic HTML, minimal scripts, optional GSAP, and strict performance rules targeting 95+ Lighthouse scores with zero vendor lock-in.
+Description: Mason is a hybrid WordPress theme with Blocksy-like enhancements, powered by Stone Mason Core. Features TT5-compatible child theme, centralized theme.json, native Gutenberg blocks, custom PHP/React blocks via mason-blocks plugin, and WooCommerce Blocks integration. Clean semantic HTML, minimal scripts, optional GSAP, and strict performance rules targeting 95+ Lighthouse scores with zero vendor lock-in.
 Author: DemeWebsolutions.com
 Author URI: https://demewebsolutions.com
 Template: twentytwentyfive
@@ -11,12 +11,13 @@ Tested up to: 6.7
 Requires PHP: 8.0
 License: Proprietary
 License URI: https://demewebsolutions.com/license
-Text Domain: stone-mason
+Text Domain: mason
 Tags: block-patterns, block-styles, custom-colors, custom-menu, e-commerce, editor-style, featured-images, full-site-editing, one-column, rtl-language-support, theme-options, threaded-comments, translation-ready, wide-blocks
 */
 
 /*
- * Stone Mason Child Theme
+ * Mason Theme
+ * Powered by Stone Mason Core (Blocksy-like enhancements)
  * Extends Twenty Twenty-Five with block-first architecture
  * for high-performance WooCommerce sites
  */
