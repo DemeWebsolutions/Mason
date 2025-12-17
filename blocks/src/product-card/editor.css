@@ -1,0 +1,23 @@
+/**
+ * Product Card Block - Editor Styles
+ * 
+ * @package StoneMason
+ */
+
+.mason-product-card-placeholder {
+	padding: 2rem;
+	text-align: center;
+	background-color: #f5f5f7;
+	border: 2px dashed #d1d1d6;
+	border-radius: 8px;
+}
+
+.mason-product-card-placeholder p {
+	margin: 0;
+	color: #86868b;
+	font-size: 0.875rem;
+}
+
+.wp-block-stone-mason-product-card {
+	margin-bottom: 1.5rem;
+}
