@@ -1,0 +1,83 @@
+/**
+ * Editor styles for Mason Blocks
+ * Styles applied only in the block editor
+ *
+ * @package MasonBlocks
+ */
+
+/* Mason Blocks Category Icon */
+.block-editor-inserter__menu .editor-block-list-item-mason {
+	--block-inserter-category-color: #0071e3;
+}
+
+/* Block Previews in Editor */
+.editor-styles-wrapper .mason-feature-grid,
+.editor-styles-wrapper .mason-product-spotlight,
+.editor-styles-wrapper .mason-sticky-buy-bar,
+.editor-styles-wrapper .mason-specs-table,
+.editor-styles-wrapper .mason-section-divider {
+	outline: 1px dashed #d2d2d7;
+	outline-offset: 4px;
+	padding: 1rem;
+}
+
+/* Feature Grid in Editor */
+.editor-styles-wrapper .mason-feature-grid__container {
+	display: grid;
+	gap: 2rem;
+}
+
+/* Product Spotlight in Editor */
+.editor-styles-wrapper .mason-product-spotlight {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+}
+
+/* Specs Table in Editor */
+.editor-styles-wrapper .mason-specs-table__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+/* Block Toolbar Enhancements */
+.block-editor-block-list__block[data-type*="mason"] .block-editor-block-toolbar {
+	background: #0071e3;
+	border-color: #0071e3;
+}
+
+.block-editor-block-list__block[data-type*="mason"] .block-editor-block-toolbar .components-button {
+	color: #fff;
+}
+
+/* Inspector Controls Styling */
+.components-panel__body.mason-block-settings {
+	border-top: 2px solid #0071e3;
+}
+
+/* Placeholder Styles */
+.mason-block-placeholder {
+	padding: 2rem;
+	text-align: center;
+	background: #f5f5f7;
+	border: 2px dashed #d2d2d7;
+	border-radius: 8px;
+}
+
+.mason-block-placeholder__icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	opacity: 0.5;
+}
+
+.mason-block-placeholder__label {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #1d1d1f;
+	margin-bottom: 0.5rem;
+}
+
+.mason-block-placeholder__instructions {
+	font-size: 0.9rem;
+	color: #86868b;
+}

@@ -1,0 +1,130 @@
+/**
+ * Editor Styles
+ * Styles specifically for the block editor
+ *
+ * @package Mason
+ */
+
+/* Editor-specific overrides */
+.editor-styles-wrapper {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 17px;
+	line-height: 1.6;
+	color: #1d1d1f;
+}
+
+/* Block Editor: Improve readability */
+.editor-styles-wrapper .wp-block {
+	max-width: 800px;
+}
+
+.editor-styles-wrapper .wp-block[data-align="wide"] {
+	max-width: 1280px;
+}
+
+.editor-styles-wrapper .wp-block[data-align="full"] {
+	max-width: none;
+}
+
+/* Block Editor: Better spacing */
+.editor-styles-wrapper .wp-block {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Block Editor: Typography */
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	font-weight: 700;
+	line-height: 1.2;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	color: #1d1d1f;
+}
+
+.editor-styles-wrapper h1 {
+	font-size: 3rem;
+}
+
+.editor-styles-wrapper h2 {
+	font-size: 2.5rem;
+}
+
+.editor-styles-wrapper h3 {
+	font-size: 2rem;
+}
+
+/* Block Editor: Links */
+.editor-styles-wrapper a {
+	color: #0071e3;
+	text-decoration: none;
+}
+
+.editor-styles-wrapper a:hover {
+	text-decoration: underline;
+}
+
+/* Block Editor: Buttons */
+.editor-styles-wrapper .wp-block-button__link {
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+/* Block Editor: Code */
+.editor-styles-wrapper code {
+	background: #f5f5f7;
+	padding: 0.2rem 0.4rem;
+	border-radius: 0.25rem;
+	font-size: 0.9em;
+	font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+.editor-styles-wrapper pre {
+	background: #1d1d1f;
+	color: #f5f5f7;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	overflow-x: auto;
+}
+
+.editor-styles-wrapper pre code {
+	background: transparent;
+	padding: 0;
+	color: inherit;
+}
+
+/* Block Editor: Tables */
+.editor-styles-wrapper table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.editor-styles-wrapper th,
+.editor-styles-wrapper td {
+	border: 1px solid #d2d2d7;
+	padding: 0.75rem;
+	text-align: left;
+}
+
+.editor-styles-wrapper th {
+	background: #f5f5f7;
+	font-weight: 600;
+}
+
+/* Block Editor: Block toolbar positioning */
+.block-editor-block-list__block {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Block Editor: Custom blocks preview */
+.editor-styles-wrapper [data-type*="mason"] {
+	outline: 1px dashed #d2d2d7;
+	outline-offset: 4px;
+}

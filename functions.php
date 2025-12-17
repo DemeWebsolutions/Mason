@@ -39,6 +39,11 @@ function mason_theme_setup() {
 
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );
+	
+	// Add editor styles for block editor.
+	if ( file_exists( MASON_PATH . '/assets/css/editor.css' ) ) {
+		add_editor_style( 'assets/css/editor.css' );
+	}
 
 	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
@@ -315,4 +320,14 @@ if ( file_exists( STONE_MASON_PATH . '/inc/woocommerce.php' ) ) {
 // Include performance utilities.
 if ( file_exists( STONE_MASON_PATH . '/inc/performance.php' ) ) {
 	require_once STONE_MASON_PATH . '/inc/performance.php';
+}
+
+// Include template tags.
+if ( file_exists( MASON_PATH . '/inc/template-tags.php' ) ) {
+	require_once MASON_PATH . '/inc/template-tags.php';
+}
+
+// Include customizer settings.
+if ( file_exists( MASON_PATH . '/inc/customizer.php' ) ) {
+	require_once MASON_PATH . '/inc/customizer.php';
 }

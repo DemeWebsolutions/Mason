@@ -1,0 +1,53 @@
+<!-- wp:template-part {"slug":"header","theme":"mason","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group woocommerce">
+	
+	<!-- wp:woocommerce/store-notices /-->
+	
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)">
+		
+		<!-- wp:woocommerce/breadcrumbs /-->
+		
+		<!-- wp:query-title {"type":"archive","level":1} /-->
+		
+		<!-- wp:term-description /-->
+		
+		<!-- wp:woocommerce/product-results-count /-->
+		
+		<!-- wp:woocommerce/catalog-sorting /-->
+		
+		<!-- wp:query {"queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":true},"namespace":"woocommerce/product-query","layout":{"type":"default"}} -->
+		<div class="wp-block-query">
+			<!-- wp:post-template {"className":"products columns-3","layout":{"type":"grid","columnCount":3}} -->
+				<!-- wp:woocommerce/product-image {"isLink":true} /-->
+				
+				<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"medium"} /-->
+				
+				<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+				
+				<!-- wp:woocommerce/product-button /-->
+			<!-- /wp:post-template -->
+
+			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+				<!-- wp:query-pagination-previous /-->
+				<!-- wp:query-pagination-numbers /-->
+				<!-- wp:query-pagination-next /-->
+			<!-- /wp:query-pagination -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph -->
+				<p>No products found.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+		</div>
+		<!-- /wp:query -->
+		
+	</div>
+	<!-- /wp:group -->
+	
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"mason","tagName":"footer"} /-->

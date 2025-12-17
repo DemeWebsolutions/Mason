@@ -1,0 +1,108 @@
+/**
+ * RTL Stylesheet
+ * Right-to-left language support
+ *
+ * @package Mason
+ */
+
+/* RTL Typography */
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/* RTL Navigation */
+.wp-block-navigation ul {
+	text-align: right;
+}
+
+.wp-block-navigation .wp-block-navigation-item {
+	float: right;
+}
+
+/* RTL Layout Adjustments */
+.wp-block-columns {
+	direction: rtl;
+}
+
+/* RTL Forms */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	text-align: right;
+}
+
+/* RTL Buttons */
+.wp-block-button {
+	text-align: right;
+}
+
+/* RTL Lists */
+ul,
+ol {
+	padding-right: 1.5rem;
+	padding-left: 0;
+}
+
+/* RTL Floats */
+.alignleft {
+	float: right;
+	margin-right: 0;
+	margin-left: 1.5rem;
+}
+
+.alignright {
+	float: left;
+	margin-left: 0;
+	margin-right: 1.5rem;
+}
+
+/* RTL Custom Blocks */
+.mason-feature-grid__item {
+	text-align: right;
+}
+
+.mason-product-spotlight--image-left {
+	direction: rtl;
+}
+
+.mason-product-spotlight--image-right {
+	direction: ltr;
+}
+
+.mason-sticky-buy-bar__container {
+	direction: rtl;
+}
+
+.mason-specs-table__label,
+.mason-specs-table__value {
+	text-align: right;
+}
+
+/* RTL WooCommerce */
+.woocommerce-breadcrumb {
+	text-align: right;
+}
+
+.woocommerce ul.products li.product {
+	float: right;
+	text-align: right;
+}
+
+.woocommerce .quantity input[type="number"] {
+	text-align: right;
+}

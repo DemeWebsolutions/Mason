@@ -1,0 +1,41 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Build files
+blocks/build/
+*.min.js
+*.min.css
+
+# Composer
+vendor/
+composer.lock
+
+# Editor
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+Thumbs.db
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# Environment
+.env
+.env.local
+
+# Testing
+coverage/
+.phpunit.result.cache
